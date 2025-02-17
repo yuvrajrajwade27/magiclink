@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th id="shortlink">Short Link</th>
+                <th id="copy">Copy</th>
+                <th id="original-link">Original link</th>
+                <th id="clicks">Clicks</th>
+                <th id="date">Date Created</th>
+                <th id="delete">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% urls.reverse().forEach(url => { %>
+            <tr>
+                <td id="shortlink"><a class="shortURL" id="<%= url.shortCode %>" href="<%= url.longUrl %>"><%= baseUrl %><%= url.shortCode %></a></td>
+                <td id="copy" class="copy-button"><img src="/assets/copy.svg" alt=""></td>
+                <td id="original-link"><a href= "<%= url.longUrl %>" > <%= url.longUrl %> </a></td>
+                <td id="clicks"><%= url.clicks %></td>
+                <td id="date"><%= moment(url.createdAt).format("DD/MM/YYYY, h:mm:ss a") %></td>
+                <td id="delete" class="delete <%= url.shortCode %>"><img src="/assets/delete.svg" alt=""></td>
+            </tr>
+        <% }); %>
+        </tbody>
+</body>
+</html>

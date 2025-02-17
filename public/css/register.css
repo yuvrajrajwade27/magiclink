@@ -1,0 +1,253 @@
+@font-face {
+    font-family: sf_pro_regular;
+    src: url("../font/SFPRODISPLAYREGULAR.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: sf_pro_medium;
+    src: url("../font/SFPRODISPLAYMEDIUM.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: sf_pro_bold;
+    src: url("../font/SFPRODISPLAYBOLD.woff2") format("woff2");
+}
+
+:root {
+    --primary-pink: #EB568E;
+    --primary-blue: #144EE3;
+    --black: #0B101B;
+    --gray: #181E29;
+    --lite: #C9CED6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    background-image: url(../images/background.svg);
+    width: 100vw;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    font-family: sf_pro_regular;
+}
+
+nav {
+    width: calc(100vw);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #2626272b;
+    border-bottom: 1px solid #ffffff2d;
+    backdrop-filter: blur(4px);
+    top: 0px;
+    position: sticky;
+}
+
+
+nav>h1 {
+    font-family: sf_pro_bold;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    background: linear-gradient(90deg, var(--primary-pink), var(--primary-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav>h1>svg {
+    width: 30px;
+}
+
+main {
+    width: 100vw;
+    height: calc(100vh - 15vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#register {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: #0000003d;
+    backdrop-filter: blur(3px);
+    padding: 20px;
+    border: 2px solid #4169e188;
+    border-radius: 20px;
+    gap: 10px;
+    transition: box-shadow 1s ease;
+}
+
+#register:hover {
+    box-shadow: 0 0 20px var(--primary-blue);
+}
+
+#heading>svg {
+    width: 40px;
+}
+
+#heading {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(90deg, var(--primary-pink), var(--primary-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: sf_pro_bold;
+}
+
+.Register-Your-Self {
+    color: var(--lite);
+    background: linear-gradient(90deg, var(--primary-pink), var(--primary-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 10px;
+    font-family: sf_pro_bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: var(--lite);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#name,
+#email {
+    width: 300px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid var(--primary-pink);
+    color: var(--lite);
+    outline: none;
+    font-size: 20px
+}
+
+#password {
+    width: 230px;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    color: var(--lite);
+    outline: none;
+    font-size: 20px
+}
+
+#show {
+    color: var(--primary-blue);
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+#password-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px;
+    border: 2px solid var(--primary-pink);
+    border-radius: 50px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    background: linear-gradient(90deg, var(--primary-pink), var(--primary-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    width: fit-content;
+}
+
+#name::placeholder,
+#email::placeholder,
+#password::placeholder {
+    color: var(--lite);
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--lite);
+    border: none;
+    background: linear-gradient(to right, #EB568E, #144EE3);
+    cursor: pointer;
+    box-shadow: 0 0 5px #eb568ecc, 0 0 5px #144ee3cc;
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    box-shadow: 0 0 10px #eb568e, 0 0 10px #144ee3;
+    background: linear-gradient(to right, #EB568E, #144EE3);
+}
+
+#or {
+    color: var(--lite);
+    background: linear-gradient(90deg, var(--primary-pink), var(--primary-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: sf_pro_bold;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+#google>img {
+    width: 40px;
+}
+
+#google {
+    padding: 1px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 5px;
+}
+
+#already {
+    margin-top: 10px;
+    color: var(--lite);
+    text-align: center;
+}
+
+#already>a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+#copyright{
+    color: var(--lite);
+    text-align: center;
+    margin-top: 20px;
+    width: 100vw;
+}
