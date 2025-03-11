@@ -15,7 +15,7 @@ const mainRoute = async (req, res) => {
 
     try {
         if (token == undefined) {
-            res.redirect("/user/login");
+            res.redirect("/user/register");
         } else {
             const userId = token._payload.id;
             const user = await userModel.findById(userId);
